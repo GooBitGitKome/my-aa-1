@@ -7,7 +7,7 @@ import {
     walletConnect,
     ThirdwebProvider,
 } from "@thirdweb-dev/react";
-import { Sepolia } from "@thirdweb-dev/chains";
+import { Goerli } from "@thirdweb-dev/chains";
 
 export default function Page()
 { 
@@ -19,7 +19,7 @@ export default function Page()
                     paperClientId: paper_client_id,
                 }),
             ]}
-            activeChain = 'Sepolia'
+            activeChain = 'Goerli'
             clientId = '51cb808944f76a774a2f20e8fa45f839'
         >
             <Top />
