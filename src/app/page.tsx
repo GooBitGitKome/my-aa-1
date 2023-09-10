@@ -7,7 +7,7 @@ import {
     walletConnect,
     ThirdwebProvider,
 } from "@thirdweb-dev/react";
-import { Sepolia } from "@thirdweb-dev/chains";
+import { Goerli } from "@thirdweb-dev/chains";
 
 export default function Page()
 { 
