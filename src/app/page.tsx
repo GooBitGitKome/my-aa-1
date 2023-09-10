@@ -12,16 +12,16 @@ import { Sepolia } from "@thirdweb-dev/chains";
 export default function Page()
 { 
     const activeChain = Sepolia;
-
+    const paper_client_id = '17e4c431-fe3e-442a-a10f-d502bb9c04fc';
     return(
         <ThirdwebProvider
             clientId="your-client-id"
             supportedWallets={[
                 paperWallet({ 
-                paperClientId: process.env.PAPER_CLIENT_ID? process.env.PAPER_CLIENT_ID : '',
+                paperClientId: paper_client_id,
                 }),
             ]}
-        >      
+        >
             <Top />
         </ThirdwebProvider>
         
