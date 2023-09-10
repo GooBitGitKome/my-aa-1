@@ -1,17 +1,17 @@
+import { Sepolia } from "@thirdweb-dev/chains";
 import { ConnectWallet } from "@thirdweb-dev/react";
-import { useConnect } from "@thirdweb-dev/react";
-import { paperWallet } from "@thirdweb-dev/react";
+import { PaperWallet } from "@thirdweb-dev/wallets";
 
 export default function Top()
 {
     const paper_client_id = '17e4c431-fe3e-442a-a10f-d502bb9c04fc';
-    const paperWalletConfig = paperWallet({
+    const wallet = new PaperWallet({
+        chain: Sepolia,
         paperClientId: paper_client_id,
     });
-    const connect = useConnect();
     
     const handleConnect = async () => {
-        await connect(paperWalletConfig);
+        await wallet.connect();
     };
 
     return(<>
