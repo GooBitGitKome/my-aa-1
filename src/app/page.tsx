@@ -16,7 +16,7 @@ export default function Page()
         <ThirdwebProvider
             clientId="your-client-id"
             supportedWallets={[
-                paperWallet({
+                paperWallet({ 
                 paperClientId: process.env.PAPER_CLIENT_ID? process.env.PAPER_CLIENT_ID : '',
                 }),
             ]}
