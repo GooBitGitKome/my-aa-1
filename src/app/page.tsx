@@ -19,7 +19,7 @@ export default function Page()
                     paperClientId: paper_client_id,
                 }),
             ]}
-            clientId = '51cb808944f76a774a2f20e8fa45f839'
+            // clientId = '51cb808944f76a774a2f20e8fa45f839'
         >
             <Top />
         </ThirdwebProvider>
