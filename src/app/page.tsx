@@ -11,7 +11,7 @@ import { Sepolia } from "@thirdweb-dev/chains";
 export const activeChain = Sepolia;
 
 export default function Page()
-{
+{ 
     return(
         <ThirdwebProvider
             clientId="your-client-id"
