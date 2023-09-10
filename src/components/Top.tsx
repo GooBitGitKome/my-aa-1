@@ -6,8 +6,8 @@ export default function Top()
 {
     const paper_client_id = '17e4c431-fe3e-442a-a10f-d502bb9c04fc';
     const paperWalletConfig = paperWallet({
-    paperClientId: paper_client_id,
-  });
+        paperClientId: paper_client_id,
+    });
     const connect = useConnect();
     
     const handleConnect = async () => {
