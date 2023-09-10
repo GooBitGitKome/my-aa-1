@@ -8,10 +8,11 @@ import {
     ThirdwebProvider,
 } from "@thirdweb-dev/react";
 import { Sepolia } from "@thirdweb-dev/chains";
-export const activeChain = Sepolia;
 
 export default function Page()
 { 
+    const activeChain = Sepolia;
+
     return(
         <ThirdwebProvider
             clientId="your-client-id"
@@ -24,5 +25,5 @@ export default function Page()
             <Top />
         </ThirdwebProvider>
         
-        );
-    }
+    );
+}
