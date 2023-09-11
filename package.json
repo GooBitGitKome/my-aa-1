@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paperxyz/embedded-wallet-service-sdk": "^1.2.0",
     "@thirdweb-dev/chains": "^0.1.50",
     "@thirdweb-dev/react": "^3.14.40",
+    "@thirdweb-dev/tsconfig": "^0.1.7",
     "@thirdweb-dev/wallets": "^1.1.23",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",

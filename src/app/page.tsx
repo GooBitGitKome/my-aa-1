@@ -3,26 +3,29 @@ import Top from "@/components/Top";
 import {
     paperWallet,
     metamaskWallet,
-    coinbaseWallet,
-    walletConnect,
+    usePaperWallet,
     ThirdwebProvider,
 } from "@thirdweb-dev/react";
-import { Goerli } from "@thirdweb-dev/chains";
+import { Sepolia } from "@thirdweb-dev/chains";
 
 export default function Page()
 { 
-    const paper_client_id :string = '17e4c431-fe3e-442a-a10f-d502bb9c04fc';
+    const activeChain = Sepolia
+    
     return(
+        // supportedWalletsに追加されている種類のものをあらかじめ指定し、ConnectWalletにその内容が反映される
+        // Smart walletを使うためにThirdwebからClientIDを取得する必要あり。
+        // Paper walletを使うためにPaperからClientIDを取得する必要あり。
         <ThirdwebProvider
-            supportedWallets={[
-                paperWallet({ 
-                    paperClientId: paper_client_id,
-                }),
-            ]}
-            // clientId = '51cb808944f76a774a2f20e8fa45f839'
-        >
-            <Top />
-        </ThirdwebProvider>
-        
+        activeChain={activeChain}
+        clientId={process.env.TW_CLIENT_ID}
+        supportedWallets={[metamaskWallet(),
+            paperWallet({
+                paperClientId: process.env.PAPER_CLIENT_ID? process.env.PAPER_CLIENT_ID : "",
+            }),
+        ]}
+      >
+        <Top />
+      </ThirdwebProvider>
     );
 }
